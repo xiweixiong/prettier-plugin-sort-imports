@@ -1,5 +1,5 @@
 {
-  "name": "@trivago/prettier-plugin-sort-imports",
+  "name": "@stoly/prettier-plugin-sort-imports",
   "version": "4.1.1",
   "description": "A prettier plugins to sort imports in provided RegEx order",
   "main": "lib/src/index.js",

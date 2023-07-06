@@ -6,8 +6,30 @@ import { extractASTNodes } from '../utils/extract-ast-nodes';
 import { getCodeFromAst } from '../utils/get-code-from-ast';
 import { getExperimentalParserPlugins } from '../utils/get-experimental-parser-plugins';
 import { getSortedNodes } from '../utils/get-sorted-nodes';
+import { organize } from '../utils/lib/organize';
+
+const organizeImports = (code: string, options: PrettierOptions) => {
+    if (
+        code.includes('// organize-imports-ignore') ||
+        code.includes('// tslint:disable:ordered-imports')
+    ) {
+        return code;
+    }
+
+    try {
+        return organize(code, options as any);
+    } catch (error) {
+        if (process.env.DEBUG) {
+            console.error(error);
+        }
+
+        return code;
+    }
+};
 
 export function preprocessor(code: string, options: PrettierOptions) {
+    code = organizeImports(code, options);
+
     const {
         importOrderParserPlugins,
         importOrder,
