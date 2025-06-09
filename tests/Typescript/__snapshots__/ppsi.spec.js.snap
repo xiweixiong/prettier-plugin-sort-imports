@@ -32,22 +32,6 @@ export class AppComponent extends BaseComponent {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 import { Component } from "@angular/core";
 import { isEmpty } from "lodash-es";
-import thirdParty from "third-party";
-import z from "z";
-
-import abc from "@core/abc";
-import otherthing from "@core/otherthing";
-
-import something from "@server/something";
-
-import component from "@ui/hello";
-import xyz from "@ui/xyz";
-
-import fourLevelRelativePath from "../../../../fourLevelRelativePath";
-import threeLevelRelativePath from "../../../threeLevelRelativePath";
-import twoLevelRelativePath from "../../twoLevelRelativePath";
-import oneLevelRelativePath from "../oneLevelRelativePath";
-import sameLevelRelativePath from "./sameLevelRelativePath";
 
 @Component({
     selector: "app-root",
@@ -84,25 +68,6 @@ import { Component } from "@angular/core";
 const somestring = "something"       satisfies   string
 
 const someobj = { hello :   "world", world:"hello"} satisfies Record<string,string>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-import { Component } from "@angular/core";
-import { isEmpty } from "lodash-es";
-import thirdParty from "third-party";
-import z from "z";
-
-import abc from "@core/abc";
-import otherthing from "@core/otherthing";
-
-import something from "@server/something";
-
-import component from "@ui/hello";
-import xyz from "@ui/xyz";
-
-import fourLevelRelativePath from "../../../../fourLevelRelativePath";
-import threeLevelRelativePath from "../../../threeLevelRelativePath";
-import twoLevelRelativePath from "../../twoLevelRelativePath";
-import oneLevelRelativePath from "../oneLevelRelativePath";
-import sameLevelRelativePath from "./sameLevelRelativePath";
-
 const somestring = "something" satisfies string;
 
 const someobj = { hello: "world", world: "hello" } satisfies Record<
@@ -151,35 +116,7 @@ export class AppComponent {
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 import { Component } from "@angular/core";
-import { isEmpty, concat, flatten } from "lodash-es";
-import thirdParty from "third-party";
-import z from "z";
-
-import abc from "@core/abc";
-import otherthing from "@core/otherthing";
-
-import something from "@server/something";
-
-import component from "@ui/hello";
-import xyz from "@ui/xyz";
-
-import fourLevelRelativePath from "../../../../fourLevelRelativePath";
-import threeLevelRelativePathA, {
-    nonDefaultModuleC,
-    nonDefaultModuleA,
-    nonDefaultModuleB,
-} from "../../../threeLevelRelativePathA";
-import * as allThreeLevelRelativePathBModules from "../../../threeLevelRelativePathB";
-import threeLevelRelativePathC, {
-    nonDefaultModuleC as nonConflictingModuleNameC,
-    nonDefaultModuleA as nonConflictingModuleNameA,
-    nonDefaultModuleB as nonConflictingModuleNameB,
-    nonDefaultModuleE,
-    nonDefaultModuleD,
-} from "../../../threeLevelRelativePathC";
-import twoLevelRelativePath from "../../twoLevelRelativePath";
-import oneLevelRelativePath from "../oneLevelRelativePath";
-import sameLevelRelativePath from "./sameLevelRelativePath";
+import { isEmpty } from "lodash-es";
 
 @Component({
     selector: "app-root",

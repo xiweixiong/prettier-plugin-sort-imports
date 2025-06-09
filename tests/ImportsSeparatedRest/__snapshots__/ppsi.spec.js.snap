@@ -22,25 +22,7 @@ function add(a:number,b:number) {
   return a + b;
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-import otherthing from "@core/otherthing";
-
-import something from "@server/something";
-
-import component from "@ui/hello";
-
-import a from "a";
-import c from "c";
-import thirdParty from "third-party";
-import x from "x";
-
-import fourLevelRelativePath from "../../../../fourLevelRelativePath";
-import threeLevelRelativePath from "../../../threeLevelRelativePath";
-import twoLevelRelativePath from "../../twoLevelRelativePath";
-import oneLevelRelativePath from "../oneLevelRelativePath";
-import sameLevelRelativePath from "./sameLevelRelativePath";
-
 export { random } from "./random";
-
 export default {
     title: "hello",
 };
@@ -55,8 +37,6 @@ exports[`import-export-only.ts - typescript-verify: import-export-only.ts 1`] = 
 import React from 'react';
 export const a = 1;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-import React from "react";
-
 export const a = 1;
 
 `;
@@ -100,8 +80,6 @@ function add(a:number,b:number) {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // I am top level comment in this file.
 // I am second line of top level comment in this file.
-import React from "react";
-
 import "./commands";
 
 // Comment
@@ -136,23 +114,6 @@ function add(a:number,b:number) {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // I am top level comment in this file.
 // I am second line of top level comment in this file.
-import abc from "@core/abc";
-import otherthing from "@core/otherthing";
-
-import qwerty from "@server/qwerty";
-import something from "@server/something";
-
-import component from "@ui/hello";
-import xyz from "@ui/xyz";
-
-import thirdParty from "third-party";
-import z from "z";
-
-import fourLevelRelativePath from "../../../../fourLevelRelativePath";
-import threeLevelRelativePath from "../../../threeLevelRelativePath";
-import twoLevelRelativePath from "../../twoLevelRelativePath";
-import oneLevelRelativePath from "../oneLevelRelativePath";
-import sameLevelRelativePath from "./sameLevelRelativePath";
 
 function add(a: number, b: number) {
     return a + b;
@@ -197,34 +158,13 @@ function add(a:number,b:number) {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //@ts-ignore
 // I am file top level comments
-import otherthing from "@core/otherthing";
-
-import something from "@server/something";
-
-import component from "@ui/hello";
-
-import a from "a";
-import c from "c";
-// I am stick to third party comment
-import thirdParty from "third-party";
-import x from "x";
-
-import fourLevelRelativePath from "../../../../fourLevelRelativePath";
-import threeLevelRelativePath from "../../../threeLevelRelativePath";
-import twoLevelRelativePath from "../../twoLevelRelativePath";
-import oneLevelRelativePath from "../oneLevelRelativePath";
-// leading comment
-import {
-    random, // inner comment
-} from "./random";
 // I am stick to sameLevelRelativePath
-import sameLevelRelativePath from "./sameLevelRelativePath";
-
+// I am stick to third party comment
+// leading comment
 // leading comment
 export {
     random, // inner comment
 } from "./random";
-
 export default {
     title: "hello",
 };
@@ -253,17 +193,6 @@ function add(a:number,b:number) {
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #!/usr/bin/env node
-import abc from "@core/abc";
-import otherthing from "@core/otherthing";
-
-import qwerty from "@server/qwerty";
-import something from "@server/something";
-
-import component from "@ui/hello";
-import xyz from "@ui/xyz";
-
-import fourLevelRelativePath from "../../../../fourLevelRelativePath";
-import twoLevelRelativePath from "../../twoLevelRelativePath";
 
 function add(a: number, b: number) {
     return a + b;
@@ -282,16 +211,7 @@ import fourLevelRelativePath from "../../../../fourLevelRelativePath";
 import something from "@server/something";
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // I am top level comment
-import abc from "@core/abc";
-import otherthing from "@core/otherthing";
-
-import something from "@server/something";
-
-import component from "@ui/hello";
-
-import fourLevelRelativePath from "../../../../fourLevelRelativePath";
 // I am comment
-import twoLevelRelativePath from "../../twoLevelRelativePath";
 
 `;
 
@@ -364,8 +284,6 @@ function add(a:number,b:number) {
 // sort-imports-ignore
 
 import "./commands";
-import b from "b";
-import a from "a";
 
 // Comment
 

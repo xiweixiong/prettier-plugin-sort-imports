@@ -12,7 +12,6 @@ module.exports.organize = (
 	code,
 	{ filepath = 'file.ts', organizeImportsSkipDestructiveCodeActions, parentParser, parser },
 ) => {
-	console.log('111', parentParser)
 	if (parentParser === 'vue') {
 		// we already did the preprocessing in the parent parser, so we skip the child parsers
 		return code;
