@@ -7,18 +7,25 @@ import { getCodeFromAst } from '../utils/get-code-from-ast';
 import { getExperimentalParserPlugins } from '../utils/get-experimental-parser-plugins';
 import { getSortedNodes } from '../utils/get-sorted-nodes';
 import { isSortImportsIgnored } from '../utils/is-sort-imports-ignored';
-import { organize } from '../utils/lib/organize';
+import { organize } from '../utils/organize/organize';
+import { ParserOptions as PrettierParserOptions } from 'prettier';
 
-const organizeImports = (code: string, options: PrettierOptions) => {
-    if (
-        code.includes('// organize-imports-ignore') ||
-        code.includes('// tslint:disable:ordered-imports')
-    ) {
+const organizeImports = (code: string, options: PrettierParserOptions) => {
+    if (code.includes('// organize-imports-ignore') || code.includes('// tslint:disable:ordered-imports')) {
         return code;
     }
 
+    const isRange =
+        Boolean(options.originalText) ||
+        options.rangeStart !== 0 ||
+        (options.rangeEnd !== Infinity && options.rangeEnd !== code.length);
+
+    if (isRange) {
+        return code; // processing a range doesn't make sense
+    }
+
     try {
-        return organize(code, options as any);
+        return organize(code, options);
     } catch (error) {
         if (process.env.DEBUG) {
             console.error(error);
@@ -29,7 +36,7 @@ const organizeImports = (code: string, options: PrettierOptions) => {
 };
 
 export function preprocessor(code: string, options: PrettierOptions) {
-    code = organizeImports(code, options);
+    code = organizeImports(code, options as any);
 
     const {
         importOrderParserPlugins,
