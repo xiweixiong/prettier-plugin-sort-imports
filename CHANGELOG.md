@@ -2,6 +2,44 @@
 
 
 ---
+### 5.2.2
+- Update packages and pin babel/types [#343](https://github.com/trivago/prettier-plugin-sort-imports/pull/343) by [@byara](https://github.com/byara)
+
+### 5.2.1
+- add svelte 5.x as peer dependency [#337](https://github.com/trivago/prettier-plugin-sort-imports/pull/337) by [@werner-drklein](https://github.com/werner-drklein)
+
+### 5.2.0
+- fix type import ordering [#331](https://github.com/trivago/prettier-plugin-sort-imports/pull/331) by [@rsslldnphy](https://github.com/rsslldnphy) 
+- Fix conditional import of prettier-plugin-svelte [#332](https://github.com/trivago/prettier-plugin-sort-imports/pull/332) by [@rsslldnphy](https://github.com/rsslldnphy)
+
+### v5.1.0
+- Fix svelte packages being required all the time [#327](https://github.com/trivago/prettier-plugin-sort-imports/pull/327) by [@byara](https://github.com/byara)
+
+### v5.0.1
+- Clean up unwanted packages and unpin dependencies [#322](https://github.com/trivago/prettier-plugin-sort-imports/pull/322) by [@byara](https://github.com/byara)
+
+### v5.0.0
+#### New features
+- Type imports [#153](https://github.com/trivago/prettier-plugin-sort-imports/pull/153) by [Xenfo](https://github.com/broofa)
+- Svelte support [#310](https://github.com/trivago/prettier-plugin-sort-imports/pull/310) by [canarddemagret](https://github.com/canarddemagret)
+- Side effect import support [#320](https://github.com/trivago/prettier-plugin-sort-imports/pull/320) by [blutorange](https://github.com/blutorange) and [vladislavarsenev](https://github.com/vladislavarsenev)
+- Fixed dollar sign group replace in Vue [#283](https://github.com/trivago/prettier-plugin-sort-imports/pull/283) by [adamDilger](https://github.com/adamDilger)
+- Support `importOrderImportAttributesKeyword` [#273](https://github.com/trivago/prettier-plugin-sort-imports/pull/273) by [chentsulin](https://github.com/chentsulin)
+
+
+### v4.3.0
+#### New features
+- added support for sort-imports-ignore [#237](https://github.com/trivago/prettier-plugin-sort-imports/pull/237) by [stephdotnet](https://github.com/stephdotnet)
+- Upgrade node in CI to current and lts versions [#264](https://github.com/trivago/prettier-plugin-sort-imports/pull/264) by [harryzcy](https://github.com/harryzcy)
+
+### v4.2.1
+#### Chore
+- Resolves Issue 262 - CVE-2023-45133 - upgrade to latest babel traverse [#266](https://github.com/trivago/prettier-plugin-sort-imports/pull/266) by [c-h-russell-walker](https://github.com/c-h-russell-walker)
+
+### v4.2.0
+#### Chore
+- update prettier peer dependency semVer to include 3.x [#239](https://github.com/trivago/prettier-plugin-sort-imports/pull/239) by [basselworkforce](https://github.com/basselworkforce)
+
 ### v4.1.1
 #### Revert
 - Type imports[#153](https://github.com/trivago/prettier-plugin-sort-imports/pull/153) by [Xenfo](https://github.com/broofa)

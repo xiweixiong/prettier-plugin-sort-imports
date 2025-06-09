@@ -6,6 +6,7 @@ import { extractASTNodes } from '../utils/extract-ast-nodes';
 import { getCodeFromAst } from '../utils/get-code-from-ast';
 import { getExperimentalParserPlugins } from '../utils/get-experimental-parser-plugins';
 import { getSortedNodes } from '../utils/get-sorted-nodes';
+import { isSortImportsIgnored } from '../utils/is-sort-imports-ignored';
 import { organize } from '../utils/lib/organize';
 
 const organizeImports = (code: string, options: PrettierOptions) => {
@@ -37,6 +38,8 @@ export function preprocessor(code: string, options: PrettierOptions) {
         importOrderSeparation,
         importOrderGroupNamespaceSpecifiers,
         importOrderSortSpecifiers,
+        importOrderSideEffects,
+        importOrderImportAttributesKeyword,
     } = options;
 
     const parserOptions: ParserOptions = {
@@ -55,6 +58,7 @@ export function preprocessor(code: string, options: PrettierOptions) {
 
     // short-circuit if there are no import declaration
     if (importNodes.length === 0) return code;
+    if (isSortImportsIgnored(importNodes)) return code;
 
     const allImports = getSortedNodes(importNodes, {
         importOrder,
@@ -62,7 +66,10 @@ export function preprocessor(code: string, options: PrettierOptions) {
         importOrderSeparation,
         importOrderGroupNamespaceSpecifiers,
         importOrderSortSpecifiers,
+        importOrderSideEffects,
     });
 
-    return getCodeFromAst(allImports, directives, code, interpreter);
+    return getCodeFromAst(allImports, directives, code, interpreter, {
+        importOrderImportAttributesKeyword,
+    });
 }
