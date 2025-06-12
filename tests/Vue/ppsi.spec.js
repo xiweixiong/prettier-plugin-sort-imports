@@ -1,4 +1,5 @@
 run_spec(__dirname, ["vue"], {
-    importOrder: ['^@core/(.*)$', '^@server/(.*)', '^@ui/(.*)$', '^[./]'],
-    importOrderSeparation: true,
+  importOrder: ["^vue(.*)", "dayjs(.*)", "@ant-design/icons-vue", "ant-design-vue(.*)", "<THIRD_PARTY_MODULES>", "@/(.*)", "^./", "^../", "lodash(.*)"],
+  importOrderSeparation: false,
+  importOrderSortSpecifiers: true
 });

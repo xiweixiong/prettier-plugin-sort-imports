@@ -28,6 +28,19 @@ function add(a,b) {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <script setup>
 // I am top level comment in this file.
+import { defineComponent } from "vue";
+import abc from "@core/abc";
+import otherthing from "@core/otherthing";
+import something from "@server/something";
+import component from "@ui/hello";
+import xyz from "@ui/xyz";
+import thirdParty from "third-party";
+import z from "z";
+import sameLevelRelativePath from "./sameLevelRelativePath";
+import fourLevelRelativePath from "../../../../fourLevelRelativePath";
+import threeLevelRelativePath from "../../../threeLevelRelativePath";
+import twoLevelRelativePath from "../../twoLevelRelativePath";
+import oneLevelRelativePath from "../oneLevelRelativePath";
 
 function add(a, b) {
     return a + b;
@@ -68,6 +81,19 @@ function add(a,b) {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <script setup>
 // I am top level comment in this file.
+import { defineComponent } from "vue";
+import abc from "@core/abc";
+import otherthing from "@core/otherthing";
+import something from "@server/something";
+import component from "@ui/hello";
+import xyz from "@ui/xyz";
+import thirdParty from "third-party";
+import z from "z";
+import sameLevelRelativePath from "./sameLevelRelativePath";
+import fourLevelRelativePath from "../../../../fourLevelRelativePath";
+import threeLevelRelativePath from "../../../threeLevelRelativePath";
+import twoLevelRelativePath from "../../twoLevelRelativePath";
+import oneLevelRelativePath from "../oneLevelRelativePath";
 
 function add(a, b) {
     return a + b;
@@ -109,6 +135,18 @@ export default defineComponent({
 <script>
 // I am top level comment in this file.
 import { defineComponent } from "vue";
+import abc from "@core/abc";
+import otherthing from "@core/otherthing";
+import something from "@server/something";
+import component from "@ui/hello";
+import xyz from "@ui/xyz";
+import thirdParty from "third-party";
+import z from "z";
+import sameLevelRelativePath from "./sameLevelRelativePath";
+import fourLevelRelativePath from "../../../../fourLevelRelativePath";
+import threeLevelRelativePath from "../../../threeLevelRelativePath";
+import twoLevelRelativePath from "../../twoLevelRelativePath";
+import oneLevelRelativePath from "../oneLevelRelativePath";
 
 function add(a, b) {
     return a + b;
@@ -192,6 +230,18 @@ export default defineComponent({
 <script lang="ts">
 // I am top level comment in this file.
 import { defineComponent } from "vue";
+import abc from "@core/abc";
+import otherthing from "@core/otherthing";
+import something from "@server/something";
+import component from "@ui/hello";
+import xyz from "@ui/xyz";
+import thirdParty from "third-party";
+import z from "z";
+import sameLevelRelativePath from "./sameLevelRelativePath";
+import fourLevelRelativePath from "../../../../fourLevelRelativePath";
+import threeLevelRelativePath from "../../../threeLevelRelativePath";
+import twoLevelRelativePath from "../../twoLevelRelativePath";
+import oneLevelRelativePath from "../oneLevelRelativePath";
 
 function add(a, b) {
     return a + b;
@@ -232,23 +282,19 @@ export default defineComponent({
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <script lang="tsx">
 // I am top level comment in this file.
-import thirdParty from "third-party";
 import { defineComponent } from "vue";
-import z from "z";
-
 import abc from "@core/abc";
 import otherthing from "@core/otherthing";
-
 import something from "@server/something";
-
 import component from "@ui/hello";
 import xyz from "@ui/xyz";
-
+import thirdParty from "third-party";
+import z from "z";
+import sameLevelRelativePath from "./sameLevelRelativePath";
 import fourLevelRelativePath from "../../../../fourLevelRelativePath";
 import threeLevelRelativePath from "../../../threeLevelRelativePath";
 import twoLevelRelativePath from "../../twoLevelRelativePath";
 import oneLevelRelativePath from "../oneLevelRelativePath";
-import sameLevelRelativePath from "./sameLevelRelativePath";
 
 function add(a, b) {
     return a + b;

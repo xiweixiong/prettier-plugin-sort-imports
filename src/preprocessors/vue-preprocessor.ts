@@ -39,7 +39,7 @@ export function vuePreprocessor(code: string, options: PrettierOptions) {
         return code;
     }
 
-    let transformedCode = organizeImports(code, options as any);
+    let transformedCode = code;
 
     const replacer = (content: string) => {
         // we pass the second argument as a function to avoid issues with the replacement string
@@ -58,5 +58,6 @@ export function vuePreprocessor(code: string, options: PrettierOptions) {
         transformedCode = replacer(scriptSetupContent);
     }
 
+    transformedCode = organizeImports(transformedCode, options as any);
     return transformedCode;
 }
