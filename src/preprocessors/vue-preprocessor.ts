@@ -8,11 +8,8 @@ const organizeImports = (code: string, options: ParserOptions) => {
         return code;
     }
 
-    const isRange =
-        Boolean(options.originalText) ||
-        options.rangeStart !== 0 ||
-        (options.rangeEnd !== Infinity && options.rangeEnd !== code.length);
-
+    const isRange = Boolean(options.originalText) || options.rangeStart !== 0;
+    // || (options.rangeEnd !== Infinity && options.rangeEnd !== code.length)
     if (isRange) {
         return code; // processing a range doesn't make sense
     }
@@ -36,7 +33,7 @@ export function vuePreprocessor(code: string, options: PrettierOptions) {
     const scriptSetupContent = descriptor.scriptSetup?.content;
 
     if (!scriptContent && !scriptSetupContent) {
-        return code;
+        return organizeImports(code, options as any);
     }
 
     let transformedCode = code;
