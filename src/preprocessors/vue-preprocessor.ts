@@ -26,6 +26,8 @@ const organizeImports = (code: string, options: ParserOptions) => {
 };
 
 export function vuePreprocessor(code: string, options: PrettierOptions) {
+    code = organizeImports(code, options as any);
+
     const { parse } = require('@vue/compiler-sfc');
     const { descriptor } = parse(code);
 
@@ -33,7 +35,7 @@ export function vuePreprocessor(code: string, options: PrettierOptions) {
     const scriptSetupContent = descriptor.scriptSetup?.content;
 
     if (!scriptContent && !scriptSetupContent) {
-        return organizeImports(code, options as any);
+        return code;
     }
 
     let transformedCode = code;
@@ -55,6 +57,5 @@ export function vuePreprocessor(code: string, options: PrettierOptions) {
         transformedCode = replacer(scriptSetupContent);
     }
 
-    transformedCode = organizeImports(transformedCode, options as any);
     return transformedCode;
 }

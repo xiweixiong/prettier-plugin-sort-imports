@@ -167,6 +167,7 @@ exports[`ts.vue - vue-verify: ts.vue 1`] = `
 <script lang="ts">
 // I am top level comment in this file.
 import z from 'z';
+import { clone } from 'lodash'
 import threeLevelRelativePath from "../../../threeLevelRelativePath";
 import sameLevelRelativePath from "./sameLevelRelativePath";
 import thirdParty from "third-party";
@@ -178,26 +179,41 @@ import component from "@ui/hello";
 import fourLevelRelativePath from "../../../../fourLevelRelativePath";
 import something from "@server/something";
 import xyz from "@ui/xyz";
-import { defineComponent } from 'vue';
+import { ref, defineComponent  } from 'vue';
 
 function add(a,b) {
   return a + b;
 }
 
 export default defineComponent({
-
+  setup() {
+    const value = ref()
+    const valueb = clone(value)
+    return {
+      value
+    }
+  }
 })
 </script>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <script lang="ts">
 // I am top level comment in this file.
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
+import { clone } from "lodash";
 
 function add(a, b) {
     return a + b;
 }
 
-export default defineComponent({});
+export default defineComponent({
+    setup() {
+        const value = ref();
+        const valueb = clone(value);
+        return {
+            value,
+        };
+    },
+});
 </script>
 
 `;
